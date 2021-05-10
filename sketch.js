@@ -1,7 +1,7 @@
 var angle;
 var axiom = 'F';
 var sentence = axiom;
-var len;
+var len = 100;
 let canva;
 
 var rules = [];
@@ -55,6 +55,8 @@ function turtle() {
   }
 }
 
+
+
 function setup() {
     
   canva = createCanvas(400, 400);
@@ -70,25 +72,24 @@ function setup() {
 function handleSavePNGBtn() {
   save(canva, `Compilers_Image_${Date.now()}.png`);
 }
-function reader(){
 
-  fetch('arquivo.txt')
+function reader(){
+fetch('arquivo.txt')
   .then(response => response.text())
   .then(text => {
     const array = text.split("\n");
     console.log(array);
 
     var axiom= array[0];
-    var regra= array[1];
-    var inicializador = array[2];
+var regra= array[1];
+var inicializador = array[2];
 
+var numero = array[3];
+var len= array[4];
+var angle = array[5];
 
-    var numero = array[3];
-    var len= array[4];
-    var angle = array[5];
-    console.log(numero);
-    console.log(tamanho);
-    console.log(angulo);
-  
+console.log(numero);
+console.log(tamanho);
+console.log(angulo);
   })
 }

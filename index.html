@@ -65,7 +65,7 @@ width:140px;
     </head>
     
     <body>
-       <button class="classname" onclick="handleSavePNGBtn()">Salvar SVG</button> <br><br>
+       <button class="classname" onclick="handleSavePNGBtn()">Salvar Imagem</button> <br><br>
 <input type="file" id="file-input" />
 <button id="read-button">Read File</button>
 <pre id="file-contents"></pre>
@@ -75,13 +75,12 @@ width:140px;
 		let file = document.querySelector("#file-input").files[0];
 		let reader = new FileReader();
 		reader.addEventListener('load', function(e) {
-	    		
-			let text = e.target.result;	    		
-			document.querySelector("#file-contents").textContent = text;
+	    		let text = e.target.result;
+	    		document.querySelector("#file-contents").textContent = text;
 		});
-reader.readAsText(file);
+		reader.readAsText(file);
 	});
 </script>
-<script src="js/sketch.js"> </script>
+       <script src="js/sketch.js"> </script>
     </body>
 </html>
