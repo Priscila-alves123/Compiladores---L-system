@@ -70,7 +70,8 @@ function setup() {
 }
 
 function handleSavePNGBtn() {
-  save(canva, `Compilers_Image_${Date.now()}.png`);
+  save(canva, `Compilers_Image_${Date.now()}.png`);  
+  save(canva, `Compilers_Image_${Date.now()}.svg`);
 }
 
 function reader(){
